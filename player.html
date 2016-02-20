@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>Audio format & tag test</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="mejs/jquery.js"></script>
+        <script src="mejs/mediaelement-and-player.min.js"></script>
+        <link rel="stylesheet" href="mejs/mediaelementplayer.css" />
+    </head>
+    <body>
+        <div style="margin: 2em">
+            <p>Mp3 audio</p>
+            <audio controls>
+                <source src="jonathan-mann-i-wont-lock-it-down.mp3" type="audio/mpeg" />
+            </audio>
+            <p>Ogg Opus ('audio/ogg')</p>
+            <audio controls>
+                <source src="jonathan-mann-i-wont-lock-it-down.opus" type="audio/ogg;" />
+                <source src="fallback-mp3.mp3" type="audio/mpeg" />
+            </audio>
+            <p>Ogg Opus ('audio/ogg; codec=opus')</p>
+            <audio controls>
+                <source src="jonathan-mann-i-wont-lock-it-down.opus" type="audio/ogg; codecs=opus" />
+                <source src="fallback-mp3.mp3" type="audio/mpeg" />
+            </audio>
+            <p>WebM Opus ('audio/webm')</p>
+            <audio controls>
+                <source src="jonathan-mann-i-wont-lock-it-down.webm" type="audio/webm" />
+                <source src="fallback-mp3.mp3" type="audio/mpeg" />
+            </audio>
+            <p>WebM Opus ('audio/webm; codec=opus')</p>
+            <audio controls>
+                <source src="jonathan-mann-i-wont-lock-it-down.webm" type="audio/webm; codec=opus" />
+                <source src="fallback-mp3.mp3" type="audio/mpeg" />
+            </audio>
+            <p>WebM Opus as .weba ('audio/webm')</p>
+            <audio controls>
+                <source src="jonathan-mann-i-wont-lock-it-down.weba" type="audio/webm" />
+                <source src="fallback-mp3.mp3" type="audio/mpeg" />
+            </audio>
+            <p style="margin-top: 4em;">Audio: <a href="https://soundcloud.com/wearecc/jonathan-mann-i-wont-lock-it-down">Jonathan Mann -- I Won't Lock It Down</a></p>
+        </div>
+        <script>
+            // using jQuery
+            $('video,audio').mediaelementplayer(/* Options */);
+        </script>
+    </body>
+</html>
